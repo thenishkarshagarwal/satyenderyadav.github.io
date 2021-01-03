@@ -1,11 +1,10 @@
 ---
-title: Text and Typography
-author: Cotes Chung
-date: 2019-08-08 11:33:00 +0800
-categories: [Blogging, Demo]
-tags: [typography]
-math: true
-image: /assets/img/sample/devices-mockup.png
+title: Passing String Literals as Template Parameters in C++20
+date: 2020-02-12 16:45:04 -0500
+categories: [blogging]
+tags: [cpp, cpp20]
+seo:
+  date_modified: 2020-05-20 13:10:43 -0400
 ---
 
 This post is to show Markdown syntax rendering on [**Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/fork), you can also use it as an example of writing. Now, let's start looking at text and typography.
