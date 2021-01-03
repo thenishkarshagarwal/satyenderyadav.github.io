@@ -8,7 +8,7 @@ tags: [writing]
 
 ## Naming and Path
 
-Create a new file named `YYYY-MM-DD-TITLE.EXTENSION` and put it in the `_post/` of the root directory. Please note that the `EXTENSION` must be one of `md` and `markdown`.
+Create a new file named `YYYY-MM-DD-TITLE.EXTENSION` and put it in the `_post/` of the root directory. Please note that the `EXTENSION` must be one of `md` and `markdown`. From `v2.4.1`, you can create sub-directories under `_posts/` to categorize posts.
 
 ## Front Matter
 
@@ -68,21 +68,7 @@ math: true
 ---
 ```
 
-## Mermaid
-
-[**Mermaid**](https://github.com/mermaid-js/mermaid) is a great diagrams generation tool. To enable it on your post, add the following to the YAML block:
-
-```yml
----
-mermaid: true
----
-```
-
-Then you can use it like other markdown language: surround the graph code with <code class="highlighter-rouge">```mermaid</code>.
-
-## Images
-
-### Preview image
+## Preview Image
 
 If you want to add an image to the top of the post contents, specify the url for the image by:
 
@@ -91,49 +77,6 @@ If you want to add an image to the top of the post contents, specify the url for
 image: /path/to/image-file
 ---
 ```
-
-### Image caption
-
-Add italics to the next line of an image，then it will become the caption and appear at the bottom of the image:
-
-```markdown
-![img-description](/path/to/image)
-_Image Caption_
-```
-
-### Image size
-
-You can specify the width (and height) of a image with `width`:
-
-```markdown
-![Desktop View](/assets/img/sample/mockup.png){: width="400"}
-```
-
-### Image position
-
-By default, the image is centered, but you can specify the position by using one of class `normal` , `left` and `right`. For example:
-
-- **Normal position**
-
-  Image will be left aligned in below sample:
-
-  ```markdown
-  ![Desktop View](/assets/img/sample/mockup.png){: width="350" .normal}
-  ```
-
-- **Float to the left**
-
-  ```markdown
-  ![Desktop View](/assets/img/sample/mockup.png){: width="240" .left}
-  ```
-
-- **Float to the right**
-
-  ```markdown
-  ![Desktop View](/assets/img/sample/mockup.png){: width="240" .right}
-  ```
-
-> **Limitation**: Once you specify the position of an image, it is forbidden to add the image caption.
 
 ## Pinned Posts
 

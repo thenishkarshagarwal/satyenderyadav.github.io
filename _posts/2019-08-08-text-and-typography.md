@@ -5,7 +5,6 @@ date: 2019-08-08 11:33:00 +0800
 categories: [Blogging, Demo]
 tags: [typography]
 math: true
-mermaid: true
 image: /assets/img/sample/devices-mockup.png
 ---
 
@@ -13,16 +12,18 @@ This post is to show Markdown syntax rendering on [**Chirpy**](https://github.co
 
 
 ## Titles
+
 ---
-# H1 - heading
 
-<h2 data-toc-skip>H2 - heading</h2>
+# H1
 
-<h3 data-toc-skip>H3 - heading</h3>
+<h2 data-toc-skip>H2</h2>
 
-<h4>H4 - heading</h4>
+<h3 data-toc-skip>H3</h3>
+
+<h4>H4</h4>
+
 ---
-<br>
 
 ## Paragraph
 
@@ -42,25 +43,17 @@ Fluttering and dancing in the breeze.
 
 ### Ordered list
 
-1. Firstly
-2. Secondly
-3. Thirdly
+1. first item
+2. second item
+3. third item
 
 ### Unordered list
 
-- Chapter
-	- Setcion
-      - Paragraph
+- item 1
+	- sub item 1
+	- sub item 2
 
-### Checkbox list
-
-- [ ] TODO
-- [x] Completed
-- Hold on
-- [ ] Defeat COVID-19
-  - [x] Vaccine production
-  - [ ] Economic recovery
-  - [ ] People smile again
+- item 2
 
 ## Block Quote
 
@@ -86,49 +79,31 @@ Click the hook will locate the footnote[^footnote].
 
 ## Images
 
-- Default (with caption)
+By default, the image is centered and the image caption can be displayed at the bottom:
 
 ![Desktop View](/assets/img/sample/mockup.png)
 _Full screen width and center alignment_
 
-<br>
-
-- Specify width
+You can change the size of the picture:
 
 ![Desktop View](/assets/img/sample/mockup.png){: width="400"}
 _400px image width_
 
-<br>
+In addition, you can use class `normal` , `left` and `right` to specify the image position (but in these case, the image caption is prohibited), for example:
 
-- Left aligned
+- Normal position
+  
+  ![Desktop View](/assets/img/sample/mockup.png){: width="350" class="normal"}
 
-![Desktop View](/assets/img/sample/mockup.png){: width="350" .normal}
+- Float to the left
 
-<br>
-
-- Float to left
-
-  ![Desktop View](/assets/img/sample/mockup.png){: width="240" .left}
+  ![Desktop View](/assets/img/sample/mockup.png){: width="240" class="left"}
   "A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space."
 
-<br>
+- Float to the right
 
-- Float to right
-
-  ![Desktop View](/assets/img/sample/mockup.png){: width="240" .right}
+  ![Desktop View](/assets/img/sample/mockup.png){: width="240" class="right"}
   "A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space."
-
-<br>
-
-## Mermaid SVG
-
-```mermaid
- gantt
-  title  Adding GANTT diagram functionality to mermaid
-  apple :a, 2017-07-20, 1w
-  banana :crit, b, 2017-07-23, 1d
-  cherry :active, c, after b a, 1d
-```
 
 ## Inline code
 
@@ -198,7 +173,7 @@ fi;
 ```
 {% endraw %}
 
-#### Html
+#### HTML
 
 ```html
 <div class="sidenav">
@@ -215,26 +190,20 @@ fi;
 </div>
 ```
 
-#### Java
+**Horizontal Scrolling**
 
-```java
-private void writeObject(java.io.ObjectOutputStream s)
-  throws java.io.IOException {
-  // Write out any hidden serialization magic
-  s.defaultWriteObject();
-
-  // Write out HashMap capacity and load factor
-  s.writeInt(map.capacity());
-  s.writeFloat(map.loadFactor());
-
-  // Write out size
-  s.writeInt(map.size());
-
-  // Write out all elements in the proper order.
-  for (E e: map.keySet())
-    s.writeObject(e);
-}
+```html
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading" id="{{ category_name }}">
+      <i class="far fa-folder"></i>
+      <p>This is a very long long long long long long long long long long long long long long long long long long long long long line.</p>
+      </a>
+    </div>
+  </div>
+</div>
 ```
+
 
 ## Reverse Footnote
 

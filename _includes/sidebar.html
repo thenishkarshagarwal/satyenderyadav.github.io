@@ -52,12 +52,12 @@
 
 <div class="sidebar-bottom d-flex flex-wrap justify-content-around mt-4">
 
-  {% unless site.theme_mode %}
+  {% if site.theme_mode == "dual" %}
   <span id="mode-toggle-wrapper">
     {% include mode-toggle.html %}
   </span>
   <span class="icon-border"></span>
-  {% endunless %}
+  {% endif %}
 
   {% for entry in site.data.contact %}
     {% capture url %}
@@ -75,7 +75,7 @@
       {%- endif -%}
     {% endcapture %}
 
-    {% if url %}
+    {% if url != '' %}
     <a href="{{ url }}" aria-label="{{ entry.type }}" {% unless entry.noblank %}target="_blank" rel="noopener"{% endunless %}>
       <i class="{{ entry.icon }}"></i>
     </a>
