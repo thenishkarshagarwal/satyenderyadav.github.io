@@ -1,7 +1,5 @@
 ---
 title: About
-icon: fas fa-info
-order: 4
 
 # The About page
 # v2.0
@@ -10,5 +8,4 @@ order: 4
 # MIT License
 ---
 
-
-> **Note**: Add Markdown syntax content to file `_tabs/about.md` and it will show up on this page.
+> **Note**: Add Markdown syntax content to file `tabs/about.md` and it will show up on this page.
