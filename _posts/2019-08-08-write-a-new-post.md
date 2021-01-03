@@ -1,52 +1,185 @@
 ---
-title: Privacy Guard in furnace
-author: vulnfreak
-date: 2019-08-08 11:33:00 +0800
-categories: [CTF]
-tags: [CTF]
-math: true
+title: Writing a New Post
+author: Cotes Chung
+date: 2019-08-08 14:10:00 +0800
+categories: [Blogging, Tutorial]
+tags: [writing]
 ---
 
-`I am completing my python project and then suddenly one person shouted that your furnance is started and your privacy guard is in danger. Till I reached there our guard is in critical condition. He told me about a file which have the secret code for the treasure and he give me the key. But I think files is protected can you help me to get the secret code`
+## Naming and Path
 
+Create a new file named `YYYY-MM-DD-TITLE.EXTENSION` and put it in the `_post/` of the root directory. Please note that the `EXTENSION` must be one of `md` and `markdown`. From `v2.4.1`, you can create sub-directories under `_posts/` to categorize posts.
 
-From it cleares give some like python anf file give hint that it is gpg file and a key is given and a secret.asc key.
+## Front Matter
 
-So this is simple we have to search from google how python encrytion work then you will one article about fernet encryption from [HERE](https://pyshark.com/encrypt-and-decrypt-files-using-python/)
+Basically, you need to fill the [Front Matter](https://jekyllrb.com/docs/front-matter/) as below at the top of the post:
 
-for script check [this](https://github.com/VulnFreak/HackFest-Writeups/blob/main/scripts/fernet.py)
-
-You will get to know that fernet required a key to decoded any file so we can write code to decode the fernet encrypted flag.txt.gpg file.
-
-After that you have to import the gpg secret file with command 
-
-`gpg --import secret.asc`
-
-But during this it ask for password for password you have to bruteforce the secret.asc with john the ripper
-
-```
-gpg2john secret,asc > hash.txt
-john --wordlist=rockyou.txt hash.txt
+```yaml
+---
+title: TITLE
+date: YYYY-MM-DD HH:MM:SS +/-TTTT
+categories: [TOP_CATEGORIE, SUB_CATEGORIE]
+tags: [TAG]     # TAG names should always be lowercase
+---
 ```
 
-You will get password `pazaway`
+> **Note**: The posts' ***layout*** has been set to `post` by default, so there is no need to add the variable ***layout*** in Front Matter block.
 
-Then you will import the secret.asc easily
+### Timezone of date
 
-After that you can decrypt the flag.txt.gpg with command
+In order to accurately record the release date of a post, you should not only setup the `timezone` of `_config.yml` but also provide the the post's timezone in field `date` of its Front Matter block. Format: `+/-TTTT`, e.g. `+0800`.
 
-`gpg -d -o decrypted.txt flag.txt.gpg`
+### Categories and Tags
 
-Then you can the flag.
+The `categories` of each post is designed to contain up to two elements, and the number of elements in `tags` can be zero to infinity.
 
-Flag : hf0x01{Y0u_4r3_r34L_Cr4ck3r_BuddY}
+The list of posts belonging to the same *category*/*tag* is recorded on a separate page. At the same time, the number of these *category*/*tag* type pages is equal to the number of `categories` / `tags` elements for all posts, which means that the two number must be exactly the same.
 
-For more study of GPG you can refer : [This](https://www.tutorialspoint.com/how-to-encrypt-and-decrypt-a-file-using-gpg-command-on-linux) 
+For instance, let's say there is a post with front matter:
+
+```yaml
+categories: [Animal, Insect]
+tags: bee
+```
+
+Then we should have two *category* type pages placed in folder `categories` of root and one *tag* type page placed in folder `tags`  of root:
+
+```sh
+.
+├── categories
+│   ├── animal.html         # a category type page
+│   └── insect.html
+├── tags
+│   └── bee.html            # a tag type page
+...
+```
+    
+and the content of a *category* type page is
+
+```yaml
+---
+layout: category
+title: CATEGORY_NAME        # e.g. Insect
+category: CATEGORY_NAME     # e.g. Insect
+---
+```
+
+the content of a *tag* type page is
+
+```yaml
+---
+layout: tag
+title: TAG_NAME             # e.g. bee
+tag: TAG_NAME               # e.g. bee
+---
+```
+
+With the increasing number of posts, the number of categories and tags will increase several times!  If we still manually create these *category*/*tag* type files, it will obviously be a super time-consuming job, and it is very likely to miss some of them, i.e., when you click on the missing `category` or `tag` link from a post or somewhere, the browser will complain to you "404 Not Found". The good news is we got a lovely script tool `_scripts/sh/create_pages.sh` to finish the boring tasks. Basically we will use it through `run.sh`, `build.sh` or `deploy.sh` that placed in `tools/` instead of running it separately. Check out its use case [here]({{ "/posts/getting-started/#deployment" | relative_url }}).
+
+## Last modified date
+
+The last modified date of a post is obtained according to the post's latest git commit date, and the modified date of all posts are designed to be stored in the file `_data/updates.yml`. Then contents of that file may be as follows:
+
+```yaml
+-
+  filename: getting-started             # the post filename without date and extension
+  lastmod: 2020-04-13 00:38:56 +0800    # the post last modified date
+-
+  ... 
+```
+
+You can choose to create this file manually, But the better approach is to let it be automatically generated by a script tool, and `_scripts/sh/dump_lastmod.sh` was born for this! Similar to the other script (`create_pages.sh`) mentioned above, it is also be called from the other superior tools, so it doesn't have to be used separately.
+
+When some posts have been modified since their published date and also the file `_data/updates.yml` was created correctly, a list with the label **Recent Updates** will be displayed in the right panel of the desktop view, which records the five most recently modified posts.
+
+## Table of Contents
+
+By default, the **T**able **o**f **C**ontents (TOC) is displayed on the right panel of the post. If you want to turn it off globally, go to `_config.yml` and set the value of variable `toc` to `false`. If you want to turn off TOC for specific post, add the following to post's [Front Matter](https://jekyllrb.com/docs/front-matter/):
+
+```yaml
+---
+toc: false
+---
+```
 
 
+## Comments
+
+Similar to TOC, the [Disqus](https://disqus.com/) comments is loaded by default in each post, and the global switch is defined by variable `comments` in file `_config.yml` . If you want to close the comment for specific post, add the following to the **Front Matter** of the post:
+
+```yaml
+---
+comments: false
+---
+```
 
 
+## Mathematics
 
+For website performance reasons, the mathematical feature won't be loaded by default. But it can be enabled by:
 
+```yaml
+---
+math: true
+---
+```
 
+## Preview Image
+
+If you want to add an image to the top of the post contents, specify the url for the image by:
+
+```yaml
+---
+image: /path/to/image-file
+---
+```
+
+## Pinned Posts
+
+You can pin one or more posts to the top of the home page, and the fixed posts are sorted in reverse order according to their release date. Enable by:
+
+```yaml
+---
+pin: true
+---
+```
+
+## Code Block
+
+Markdown symbols <code class="highlighter-rouge">```</code> can easily create a code block as following examples.
+
+```
+This is a common code snippet, without syntax highlight and line number.
+```
+
+## Specific Language
+
+Using <code class="highlighter-rouge">```language</code> you will get code snippets with line numbers and syntax highlight.
+
+> **Note**: The Jekyll style `{% raw %}{%{% endraw %} highlight LANGUAGE {% raw %}%}{% endraw %}` or `{% raw %}{%{% endraw %} highlight LANGUAGE linenos {% raw %}%}{% endraw %}` are not allowed to be used in this theme !
+
+```yaml
+# Yaml code snippet
+items:
+    - part_no:   A4786
+      descrip:   Water Bucket (Filled)
+      price:     1.47
+      quantity:  4
+```
+
+### Liquid Codes
+
+If you want to display the **Liquid** snippet, surround the liquid code with `{% raw %}{%{% endraw %} raw {%raw%}%}{%endraw%}` and `{% raw %}{%{% endraw %} endraw {%raw%}%}{%endraw%}` .
+
+{% raw %}
+```liquid
+{% if product.title contains 'Pack' %}
+  This product's title contains the word Pack.
+{% endif %}
+```
+{% endraw %}
+
+## Learn More
+
+For more knowledge about Jekyll posts, visit the [Jekyll Docs: Posts](https://jekyllrb.com/docs/posts/).
 

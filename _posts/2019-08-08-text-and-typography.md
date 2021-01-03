@@ -1,38 +1,210 @@
 ---
-title: Programmming Fight 
-author: satyender
-date: 2020-08-08 11:33:00 +0800
-categories: [Blogging, Tutorial]
-tags: [CTF]
+title: Text and Typography
+author: Cotes Chung
+date: 2019-08-08 11:33:00 +0800
+categories: [Blogging, Demo]
+tags: [typography]
 math: true
+image: /assets/img/sample/devices-mockup.png
 ---
 
+This post is to show Markdown syntax rendering on [**Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/fork), you can also use it as an example of writing. Now, let's start looking at text and typography.
 
 
-Description States 
+## Titles
 
-`Me and my friend want security so we so we digest our password five times with our programming skills. Now we Think we are secured and no one guess our password. Is it true ?`
+---
 
-Hint : Next File Name Matters a Lot
+# H1
+
+<h2 data-toc-skip>H2</h2>
+
+<h3 data-toc-skip>H3</h3>
+
+<h4>H4</h4>
+
+---
+
+## Paragraph
+
+I wandered lonely as a cloud
+
+That floats on high o'er vales and hills,
+
+When all at once I saw a crowd,
+
+A host, of golden daffodils;
+
+Beside the lake, beneath the trees,
+
+Fluttering and dancing in the breeze.
+
+## List
+
+### Ordered list
+
+1. first item
+2. second item
+3. third item
+
+### Unordered list
+
+- item 1
+	- sub item 1
+	- sub item 2
+
+- item 2
+
+## Block Quote
+
+> This line to shows the Block Quote.
+
+## Tables
+
+| Company                      | contact          | Country |
+|:-----------------------------|:-----------------|--------:|
+| Alfreds Futterkiste          | Maria Anders     | Germany |
+| Island Trading               | Helen Bennett    | UK      |
+| Magazzini Alimentari Riuniti | Giovanni Rovelli | Italy   |
+
+## Link
+
+<http://127.0.0.1:4000>
 
 
-So from the description we can get that password is 5 times digested which clearly states that it is MD5 hash and from hint we get that next file is important.
+## Footnote
 
-We are provided with the a zip name 1300.zip and it is password protected. So if we combine all the hint what we collect till yet then we can got that password will be MD5 hash of the name of the next file. To solve this you can simply write python script to extract all the zip.
+Click the hook will locate the footnote[^footnote].
+
+
+## Images
+
+By default, the image is centered and the image caption can be displayed at the bottom:
+
+![Desktop View](/assets/img/sample/mockup.png)
+_Full screen width and center alignment_
+
+You can change the size of the picture:
+
+![Desktop View](/assets/img/sample/mockup.png){: width="400"}
+_400px image width_
+
+In addition, you can use class `normal` , `left` and `right` to specify the image position (but in these case, the image caption is prohibited), for example:
+
+- Normal position
+  
+  ![Desktop View](/assets/img/sample/mockup.png){: width="350" class="normal"}
+
+- Float to the left
+
+  ![Desktop View](/assets/img/sample/mockup.png){: width="240" class="left"}
+  "A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space."
+
+- Float to the right
+
+  ![Desktop View](/assets/img/sample/mockup.png){: width="240" class="right"}
+  "A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space."
+
+## Inline code
+
+This is an example of `Inline Code`.
+
+## Mathematics
+
+The mathematics powered by [**MathJax**](https://www.mathjax.org/):
+
+$$ \sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6} $$
+
+When \\(a \ne 0\\), there are two solutions to \\(ax^2 + bx + c = 0\\) and they are
+
+$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+
+## Code Snippet
+
+### Common
 
 ```
-import os
-import hashlib
-j=1
-for i in range(1301,0,-1):
-	prev = i-j
-	p = hashlib.md5(str(prev).encode())
-	p = p.hexdigest()
-	print(f"{i}"+f".zip password: {p}")
-	os.system(f'unzip -P {p} {i}.zip ')
-
+This is a common code snippet, without syntax highlight and line number.
 ```
-so after this you get the 0.zip then if you see 0.zip it have flag.txt in it. Apply the same concept on it just MD5 of the flag and use as a password you will get flag.txt. Which have your flag.
+
+### Specific Languages
+
+#### Console
+
+```console
+$ date
+Sun Nov  3 15:11:12 CST 2019
+```
 
 
-Flag : `hf0x01{T7h1$_sh0w$_Y0u_Kn0w_pr0gr4mm1nG_4nD_ha$1nG_v3rY_W3LL}`
+#### Terminal
+
+```terminal
+$ env |grep SHELL
+SHELL=/usr/local/bin/bash
+PYENV_SHELL=bash
+```
+
+#### Ruby
+
+```ruby
+def sum_eq_n?(arr, n)
+  return true if arr.empty? && n == 0
+  arr.product(arr).reject { |a,b| a == b }.any? { |a,b| a + b == n }
+end
+```
+
+#### Shell
+
+```shell
+if [ $? -ne 0 ]; then
+    echo "The command was not successful.";
+    #do the needful / exit
+fi;
+```
+
+#### Liquid
+
+{% raw %}
+```liquid
+{% if product.title contains 'Pack' %}
+  This product's title contains the word Pack.
+{% endif %}
+```
+{% endraw %}
+
+#### HTML
+
+```html
+<div class="sidenav">
+  <a href="#contact">Contact</a>
+  <button class="dropdown-btn">Dropdown
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+  <a href="#contact">Search</a>
+</div>
+```
+
+**Horizontal Scrolling**
+
+```html
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading" id="{{ category_name }}">
+      <i class="far fa-folder"></i>
+      <p>This is a very long long long long long long long long long long long long long long long long long long long long long line.</p>
+      </a>
+    </div>
+  </div>
+</div>
+```
+
+
+## Reverse Footnote
+
+[^footnote]: The footnote source.
