@@ -1,0 +1,62 @@
+/*!
+* The main dark mode styles
+* v2.0
+* https://github.com/cotes2020/jekyll-theme-chirpy
+* © 2018-2019 Cotes Chung
+* MIT Licensed
+*/
+
+@media (prefers-color-scheme: dark) {
+  html {
+    /* framework */
+    --main-wrapper-bg: rgb(0, 0, 1);
+    --topbar-wrapper-bg:rgb(0, 0, 1);
+    --search-wrapper-bg: rgb(0, 0, 1);
+    --search-icon: rgb(100, 102, 105);
+    --input-focus-border: rgb(255, 255, 255);
+    --footer-bg: rgb(0, 0, 1);
+    --footer-border: rgb(0, 0, 1);
+    --mask-bg: rgb(0, 0, 1);
+
+    /* sidebar */
+    --nav-cursor: rgb(183, 182, 182);
+    --sidebar-bg: rgb(0, 0, 1);
+
+    /* common color */
+    --text-color: rgb(216, 217, 218);
+    --text-muted-color: rgb(107, 116, 124);
+    --link-color: rgb(138, 180, 248);
+    --link-underline-color: rgb(99, 131, 182);
+    --main-border: rgb(63, 65, 68);
+    --button-bg: rgb(0, 0, 1);;
+    --blockquote-border: rgb(66, 66, 66);
+    --blockquote-text: rgb(117, 117, 117);
+
+    --card-bg: rgb(0, 0, 1);
+    --card-header-bg: rgb(0, 0, 1);
+    --relate-post-title: rgb(164, 175, 181);
+
+    /* Home page */
+    --btn-active-bg: #1c345e;
+    --btn-active-border-color: #8ab4f8;
+
+    /* posts */
+    --toc-highlight: rgb(116, 178, 243);
+    --tag-bg: rgb(41, 40, 40);
+    --tag-hover: rgb(41, 40, 40);
+    --tag-hover-text: rgb(255, 255, 255);
+    --tag-hover-border: rgb(255, 255, 255);
+    --tb-odd-bg: rgba(52, 53, 42, 0.52); /* odd rows of the posts' table */
+    --tb-even-bg: rgb(31, 31, 34); /* even rows of the posts' table */
+
+    /* tags */
+    --tag-border: rgb(59, 79, 88);
+    --tag-shadow: rgb(32, 33, 33);
+
+    /* categories */
+    --categories-hover-bg: rgb(73, 75, 76);
+
+    /* archives */
+    --timeline-node-bg: rgb(150, 152, 156);
+  }
+}
