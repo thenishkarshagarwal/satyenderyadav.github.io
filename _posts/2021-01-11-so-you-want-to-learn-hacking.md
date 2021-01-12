@@ -52,11 +52,10 @@ first things first, you should know what you are willing to struggle for.
 i.e. here's a **roadmap** of all the things you should know to become a *__1337 h4x0r__*.
 <br>
 - typing skills [TOUCH TYPING]
-- command line skills [cmd, console, terminal, powershell, etc]
+- basic computer skills [a+ practical]
+- command line skills [cmd, powershell, terminal]
 - networking skills
-- familiarity with OSs & distributions [OFC!]
 - programming skills
-- reading interest [read a lot of books]
 <br>
 <br>
 
@@ -67,12 +66,12 @@ so, you should master a specific area WELL, & get good at it.
 <br>
 so, according to me, JUST a 'hacker' doesn't exist.
 <br>
-but if you learn everything on the roadmap,
+but if you learn everything on the roadmap [critical skills],
 <br>
 you will know that there are some things which interests you more than others.
 <br>
 <br>
-and after finding that, just leave everything and start focusing on them,
+and after finding that, start focusing on them,
 <br>
 because **doing something you don't like, is time wasted.**
 <br>
@@ -83,7 +82,7 @@ PS: if you don't need resources at the moment, you can leave.
 
 ### #1 PRACTICE TOUCH TYPING
 <br>
-the first and the foremost thing is to master the keyboard,
+the first and the foremost thing to do, is to master the keyboard,
 <br>
 so you can quickly put in all you commands, and save a lot of time.
 <br>
@@ -108,3 +107,74 @@ so, typing slowly & making more mistakes > typing fast with more mistakes.
 - you'll gradually notice that your typing speed increases over time,
 <br>
 kudos to you, you did it.
+<br>
+<br>
+
+### #2 COMMAND LINE SKILLS
+<br>
+now this one is even more important, and comes gradually from experience.
+<br>
+you need to get your hands set, as this is where you'll be spending most of your time.
+<br>
+<br>
+
+[linuxjourney.com](linuxjourney.com); a great way to learn the basic terminal commands with quizzes & exercises.
+<br>
+PS: just pull out a cheat-sheet, install a linux distro & start learning.
+<br>
+<br>
+this is how we all learn, we are humans. google each term, and know about them.
+<br>
+or maybe, read some books, watch some video courses, experiment & find out.
+<br>
+_[just look into the command-prompt, & powershell  the same way]_
+<br>
+<br>
+### #2 NETWORKING SKILLS
+<br>
+you need networking, you really do. atleast a bit.
+<br>
+go through these blog posts, and the videos below, and that's more than enough.
+<br>
+<br>
+
+[Networking Basics for the Aspiring Hacker, Part 1](https://null-byte.wonderhowto.com/how-to/hack-like-pro-networking-basics-for-aspiring-hacker-part-1-0166005/);
+<br>
+[Networking Basics for the Aspiring Hacker, Part 2 (TCP/IP)](https://null-byte.wonderhowto.com/how-to/hack-like-pro-networking-basics-for-aspiring-hacker-part-2-tcp-ip-0167970/);
+<br>
+[Understand & Use IPv4 to Navigate a Network](https://null-byte.wonderhowto.com/how-to/understand-use-ipv4-navigate-network-0193295/);
+<br>
+[A Gentle Introduction to How IP Addresses Work](https://null-byte.wonderhowto.com/how-to/hacker-fundamentals-gentle-introduction-ip-addresses-work-0133638/);
+<br>
+[A Hitchhiker's Guide to the Internet: Today and Now, How It All Connects](https://null-byte.wonderhowto.com/how-to/hitchhikers-guide-internet-today-and-now-all-connects-0134677/);
+<br>
+[A Hitchhiker's Guide to the Internet: A Brief History of How the Net Came to Be](https://null-byte.wonderhowto.com/how-to/hitchhikers-guide-internet-brief-history-net-came-be-0134490/);
+<br>
+[The Everyman's Guide to How Network Packets Are Routed Across the Web](https://null-byte.wonderhowto.com/how-to/hacker-fundamentals-everymans-guide-network-packets-are-routed-across-web-0134491/);
+<br>
+[Spy on Your "Buddy's" Network Traffic: An Intro to Wireshark and the OSI Model](https://null-byte.wonderhowto.com/how-to/spy-your-buddys-network-traffic-intro-wireshark-and-osi-model-0133807/);
+<br>
+[A Tale of Two Standards](https://null-byte.wonderhowto.com/how-to/hacker-fundamentals-tale-two-standards-0133727/);
+<br>
+[CompTIA Network+ N10-007 Training Course](https://www.youtube.com/playlist?list=PLG49S3nxzAnmpdmX7RoTOyuNJQAb-r-gd);
+<br>
+<br>
+### #3 TOOLS
+<br>
+now this is very important, this is where things start changing.
+<br>
+bluntly learning the tools' syntax will make you a script kiddie,  
+<br>
+<br>
+so you gotta learn all those tools [below],
+<br>
+and most importantly, learn how they work.
+
+<br>
+<br>
+
+at the end, I would like to conclude that this was my way of learning,
+<br>
+and yours could be **totally different, correct** & **efficient** at the same time.
+<br>
+so simply, **ALWAYS KEEP LEARNING**.
