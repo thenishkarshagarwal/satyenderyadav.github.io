@@ -57,7 +57,6 @@ i.e. here's a **roadmap** of all the things you should know to become a *__1337 
 - networking skills
 - programming skills
 <br>
-<br>
 
 well before that, you should know that **you can learn everything, but can't master everything.**
 <br>
@@ -103,7 +102,7 @@ remember you will be pretty slow at that time, but don't quit.
 <br>
 coz you'll make a lot of typos in the starting,
 <br>
-so, typing slowly & making more mistakes > typing fast with more mistakes.
+so, typing slowly & making less mistakes > typing fast with more mistakes.
 - you'll gradually notice that your typing speed increases over time,
 <br>
 kudos to you, you did it.
@@ -132,12 +131,12 @@ _[just look into the command-prompt, & powershell  the same way]_
 <br>
 ### #2 NETWORKING SKILLS
 <br>
-you need networking, you really do. atleast a bit.
+
+you need networking, _you really do_. _atleast a bit_.
 <br>
 go through these blog posts, and the videos below, and that's more than enough.
 <br>
 <br>
-
 [Networking Basics for the Aspiring Hacker, Part 1](https://null-byte.wonderhowto.com/how-to/hack-like-pro-networking-basics-for-aspiring-hacker-part-1-0166005/);
 <br>
 [Networking Basics for the Aspiring Hacker, Part 2 (TCP/IP)](https://null-byte.wonderhowto.com/how-to/hack-like-pro-networking-basics-for-aspiring-hacker-part-2-tcp-ip-0167970/);
@@ -169,12 +168,69 @@ bluntly learning the tools' syntax will make you a script kiddie,
 so you gotta learn all those tools [below],
 <br>
 and most importantly, learn how they work.
+<br>
+<br>
+
+- Wireshark (Wireless Auditing)
+- Metasploit Framework (msfconsole)
+- Nmap (Network Mapper)
+- Nessus (Vulnerability Scanner)
+- Aircrack-ng Suite (Wifi Cracking)
+- John The Ripper (Password Cracking)
+- Hydra (password cracker)
+- Nikto (Network Scanner)
+- NetDiscover (IP Discover)
+- Hashcat (Password Cracker)
+- BurpSuite (Web Exploitation)
+<br>
+<br>
+### #3 PROGRAMMING SKILLS
+<br>
+the top 3 programing languages [a must to learn];
+<br>
+<br>
+
+- JavaScript
+- Python
+- C/C++
+<br>
+
+START with these languages, **DON'T STOP LEARNING PROGRAMMING**.
+<br>
+just START learning it, and hacking too [side-by-side];
+<br>
+and on your way, it's time to **solve some ctf challs and root some boxes**.
+<br>
+[ik you're still a beginner in programming, & that's completely okay]
+<br>
+<br>
+oh! so you need resources to help you get started?
+<br>
+huhh! as if you think i'll provide you. don't you remember what i said earlier?
+<br>
+<br>
+> YOU HAVE TO BECOME A SELF LEARNER.
+> [& GOOGLE is your best friend here ;]
 
 <br>
+
+> this is how we all learn, we are humans. google each term, follow some tutorials.
+> or maybe, read some books, watch some video courses, experiment & find out.
+
+<br>
+<br>
+### #4 NEXT STEPS
 <br>
 
 at the end, I would like to conclude that this was my way of learning,
 <br>
-and yours could be **totally different, correct** & **efficient** at the same time.
+and yours could be **totally different, correct** & **efficient** at the very same time.
 <br>
 so simply, **ALWAYS KEEP LEARNING**.
+<br>
+and have a great day ahead.
+<br>
+<br>
+~ Nishkarsh Agarwal
+<br>
+signing off.
